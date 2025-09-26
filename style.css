@@ -5,22 +5,26 @@
 }
 body{
     background-color: black;
+
+}
+#visor{
+    color: white;
+    font-size: 60px;
+}
+#principal{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;   
-    grid-template-areas: 
-    "btnAC btn+- btn% btn/"
-    "btn7 btn8 btn9 btnX"
-    "btn4 btn5 btn6 btn-"
-    "btn1 btn2 btn3 btn+"
-    "btn0 btn0 btn. btn="
-    ;
+    width: 500px;
+    height: 200px;
+    
 }
 button{
-    width: 50px;
-    height: 40px;
+    width: 100px;
+    height: 80px;
 }
 .numero{
     background-color: #333333;
@@ -36,4 +40,7 @@ button{
     background-color: #FE9F0A;
     color: white;
     border-radius: 50px;
+}
+#zero{
+    width: 208px;
 }
