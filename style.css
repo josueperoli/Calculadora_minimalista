@@ -3,3 +3,37 @@
     margin: 0;
     border: 0;
 }
+body{
+    background-color: black;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;   
+    grid-template-areas: 
+    "btnAC btn+- btn% btn/"
+    "btn7 btn8 btn9 btnX"
+    "btn4 btn5 btn6 btn-"
+    "btn1 btn2 btn3 btn+"
+    "btn0 btn0 btn. btn="
+    ;
+}
+button{
+    width: 50px;
+    height: 40px;
+}
+.numero{
+    background-color: #333333;
+    color: white;
+    border-radius: 50px;
+}
+.outros{
+    background-color: #A5A5A5;
+    color: black;
+    border-radius: 50px;
+}
+.operacao{
+    background-color: #FE9F0A;
+    color: white;
+    border-radius: 50px;
+}
