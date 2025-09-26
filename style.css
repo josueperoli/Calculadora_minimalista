@@ -41,6 +41,8 @@ button{
     color: white;
     border-radius: 50px;
 }
-#zero{
-    width: 208px;
+#apagar{
+    background-color: #A5A5A5;
+    color: black;
+    border-radius: 50px;
 }
