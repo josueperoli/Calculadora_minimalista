@@ -48,3 +48,23 @@ botaoOpe.forEach(Botao => {
 
 //---------Função Calcular---------
 
+function calcular(){
+    const anterior = parseFloat(numAnterior);
+    const atual = parseFloat(numAtual);
+    let resultado;
+
+    if (isNaN(anterior) || isNaN(atual)) return;
+
+    switch (operacao){
+        case "+" : resultado = anterior + atual; break;
+        case "-" : resultado = anterior - atual; break;
+        case "X" : resultado = anterior * atual; break;
+        case "/" : resultado = anterior / atual; break;
+        default: return;
+    }
+
+    visor_div.innerText = resultado;
+    numAtual = resultado.toString();
+    numAnterior = "";
+    operacao = "";
+}
