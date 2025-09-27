@@ -10,7 +10,7 @@ let operacao = ""; // armazena a operação
 //-----Numeros-------- 
 
 botaoNum.forEach(Botao =>{     //Para cada botão de número apertado ...
-    Botao.addEventListener("click", ()=>{    // Quando clicar ...
+    Botao.addEventListener("click", () => {    // Quando clicar ...
         const valor = Botao.innerText;    //"valor" vai armazenar o texto do botao apertado
         if(visor_div.innerText === "0"){   // Se o valor inicial for 0, ...
             visor_div.innerText = valor; // o texto do visor vai mudar de 0 para o valor que estiver na variável "valor"
@@ -21,3 +21,30 @@ botaoNum.forEach(Botao =>{     //Para cada botão de número apertado ...
         }
     });
 });
+
+
+//--------Operações-------
+
+botaoOpe.forEach(Botao => {
+    Botao.addEventListener("click", () => {
+        const valor = Botao.innerText;
+
+        if(valor === "="){
+            calcular();
+        } else {
+            if(valor === ""){
+                return;
+            }
+            if(valor !== ""){
+                calcular();
+            }
+            numAnterior = numAtual;
+            numAtual = "";
+            operacao = valor;
+            visor_div.innerText = "0";
+        }
+    })
+})
+
+//---------Função Calcular---------
+
